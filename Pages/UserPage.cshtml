@@ -1,0 +1,103 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "User";
+}
+    <h1>Muscle Lessons</h1>
+    <div class="intro">
+        <p>
+            Looking to get started with your fitness journey or perhaps enhance your existing workout routine? You're in the right place! The Muscle Lessons page provides a comprehensive collection of lessons tailored to different muscle groups and difficulty levels.
+        </p>
+        <p>
+            Explore a variety of lessons covering topics such as muscle anatomy, exercise techniques, and workout strategies designed to help you achieve your fitness goals effectively.
+        </p>
+        <p>
+            Simply select the lessons that interest you, and embark on a journey to better understand and strengthen your muscles. Let's get started!
+        </p>
+    </div>
+
+    <form asp-controller="Home" asp-action="Confirm" method="post">
+        <div class="muscle-group">
+            <h2>Chest</h2>
+            <img src="https://athleanx.com/wp-content/uploads/2021/09/chest-workouts.png" alt="Chest" class="muscle-image">
+            <div class="lesson">
+                <input type="checkbox" id="chest-lesson1" name="lessons[]" value="Anatomy of the Chest Muscles (Beginner)">
+                <label for="lesson1">Anatomy of the Chest Muscles (Beginner)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="chest-lesson2" name="lessons[]" value="Chest Exercises for Strength (Intermediate)">
+                <label for="lesson2">Chest Exercises for Strength (Intermediate)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="chest-lesson3" name="lessons[]" value="Building Mass in the Chest (Advanced)">
+                <label for="lesson3">Building Mass in the Chest (Advanced)</label>
+            </div>
+        </div>
+        <div class="muscle-group">
+            <h2>Back</h2>
+            <img src="https://athleanx.com/wp-content/uploads/2021/10/BACK-MAIN-IMAGE.png" alt="Back" class="muscle-image">
+            <div class="lesson">
+                <input type="checkbox" id="back-lesson1" name="lessons[]" value="Understanding Back Muscle Anatomy (Beginner)">
+                <label for="lesson1">Understanding Back Muscle Anatomy (Beginner)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="back-lesson2" name="lessons[]" value="Strengthening the Back for Posture (Intermediate)">
+                <label for="lesson2">Strengthening the Back for Posture (Intermediate)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="back-lesson3" name="lessons[]" value="Back Exercises for Hypertrophy (Advanced)">
+                <label for="lesson3">Back Exercises for Hypertrophy (Advanced)</label>
+            </div>
+        </div>
+        <div class="muscle-group">
+            <h2>Legs</h2>
+            <img src="https://athleanx.com/wp-content/uploads/2022/09/LEG-WORKOUTS.png" alt="Legs" class="muscle-image">
+            <div class="lesson">
+                <input type="checkbox" id="legs-lesson1" name="lessons[]" value="Anatomy of the Leg Muscles (Beginner)">
+                <label for="lesson1">Anatomy of the Leg Muscles (Beginner)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="legs-lesson2" name="lessons[]" value="Leg Workouts for Strength and Stability (Intermediate)">
+                <label for="lesson2">Leg Workouts for Strength and Stability (Intermediate)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="legs-lesson3" name="lessons[]" value="Building Powerful Legs with Squats and Deadlifts (Advanced)">
+                <label for="lesson3">Building Powerful Legs with Squats and Deadlifts (Advanced)</label>
+            </div>
+        </div>
+        <div class="muscle-group">
+            <h2>Arms</h2>
+            <img src="https://athleanx.com/wp-content/uploads/2022/08/arm-workouts-arm-exercises.png" alt="Arms" class="muscle-image">
+            <div class="lesson">
+                <input type="checkbox" id="arms-lesson1" name="lessons[]" value="Anatomy of the Arm Muscles (Beginner)">
+                <label for="lesson1">Anatomy of the Arm Muscles (Beginner)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="arms-lesson2" name="lessons[]" value="Arm Workouts for Biceps and Triceps (Intermediate)">
+                <label for="lesson2">Arm Workouts for Biceps and Triceps (Intermediate)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="arms-lesson3" name="lessons[]" value="Developing Strong Forearms (Advanced)">
+                <label for="lesson3">Developing Strong Forearms (Advanced)</label>
+            </div>
+        </div>
+        <div class="muscle-group">
+            <h2>Shoulders</h2>
+            <img src="https://athleanx.com/wp-content/uploads/2021/02/shoulder-muscles-anatomy-front-middle-rear-delt-1024x576.jpg" alt="Shoulders" class="muscle-image">
+            <div class="lesson">
+                <input type="checkbox" id="shoulders-lesson1" name="lessons[]" value="Understanding Shoulder Muscle Function (Beginner)">
+                <label for="lesson1">Understanding Shoulder Muscle Function (Beginner)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="shoulders-lesson2" name="lessons[]" value="Shoulder Exercises for Size and Definition (Intermediate)">
+                <label for="lesson2">Shoulder Exercises for Size and Definition (Intermediate)</label>
+            </div>
+            <div class="lesson">
+                <input type="checkbox" id="shoulders-lesson3" name="lessons[]" value="Preventing Shoulder Injuries (Advanced)">
+                <label for="lesson3">Preventing Shoulder Injuries (Advanced)</label>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <input type="submit" value="Submit">
+        </div>
+    </form>

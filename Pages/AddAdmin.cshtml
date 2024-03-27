@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beheer van Mentoren</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: url('https://png.pngtree.com/thumb_back/fh260/background/20230613/pngtree-black-and-white-gym-room-with-a-row-of-equipment-image_2911173.jpg') center center fixed;
+            background-size: cover;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+                outline: none;
+                border-color: #007bff;
+            }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td form {
+            display: inline;
+        }
+
+            td form input[type="submit"] {
+                padding: 5px 10px;
+                margin-left: 5px;
+                background-color: #dc3545;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                td form input[type="submit"]:hover {
+                    background-color: #c82333;
+                }
+    </style>
+</head>
+<body>
+    <h2>Beheer van Mentoren</h2>
+
+    <h3>Nieuwe Admin Toevoegen</h3>
+    <form action="/add_admin" method="post">
+        <label for="username">Gebruikersnaam:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Wachtwoord:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Admin Toevoegen">
+    </form>
+
+    <h3>Bestaande Mentoren Verwijderen</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Gebruikersnaam</th>
+                <th>Actie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mentor 1</td>
+                <td>
+                    <form action="/delete_admin" method="post">
+                        <input type="hidden" name="username" value="Admin1">
+                        <input type="submit" value="Verwijderen">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Mentor 2</td>
+                <td>
+                    <form action="/delete_admin" method="post">
+                        <input type="hidden" name="username" value="Admin2">
+                        <input type="submit" value="Verwijderen">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

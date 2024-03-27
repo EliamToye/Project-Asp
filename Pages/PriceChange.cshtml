@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: url('https://png.pngtree.com/thumb_back/fh260/background/20230613/pngtree-black-and-white-gym-room-with-a-row-of-equipment-image_2911173.jpg') center center fixed;
+            background-size: cover;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+            input[type="number"]:focus {
+                outline: none;
+                border-color: #007bff;
+            }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <h2>Prijzen van Producten Aanpassen</h2>
+    <form asp-action="/update_prices" method="post">
+        <label for="Beginner">Beginner:</label><br>
+        <input type="number" id="Beginner" name="Beginner" step="1" value="20"><br>
+        <label for="Intermediate">Intermediate:</label><br>
+        <input type="number" id="Intermediate" name="Intermediate" step="1" value="25"><br>
+        <label for="Advanced">Advanced:</label><br>
+        <input type="number" id="Advanced" name="Advanced" step="1" value="27"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
