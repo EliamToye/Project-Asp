@@ -4,9 +4,70 @@
     ViewData["Title"] = "Login";
 }
 
+<style>
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .login-form {
+        margin-bottom: 20px;
+    }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-form button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .login-form button[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+    .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+
 <div class="container">
-    <h2>Login</h2>
-    <form method="post">
+    <h1>User Login</h1>
+    <p>Welkom bij Gym : Kakarott</p>
+    <p>Gelieve in te loggen</p>
+    <form class="login-form" method="post">
         <div>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required />
@@ -20,6 +81,6 @@
 
     @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
     {
-        <div class="text-danger">@ViewData["ErrorMessage"]</div>
+        <div class="error-message">@ViewData["ErrorMessage"]</div>
     }
 </div>

@@ -3,7 +3,80 @@
 @{
     ViewData["Title"] = "User";
 }
-    <h1>Muscle Lessons</h1>
+
+<style>
+    h1 {
+        text-align: center;
+        color: #007bff;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .muscle-group {
+        margin-bottom: 20px;
+    }
+
+        .muscle-group h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+    .intro p {
+        color: #777;
+        margin-bottom: 20px;
+    }
+
+    .lesson {
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: 2px solid #ccc;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+
+    .muscle-image {
+        float: left;
+        margin-right: 20px;
+        width: 150px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .submit-btn {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    label {
+        cursor: pointer;
+    }
+</style>
+
+<h1>Muscle Lessons</h1>
+<div class="container">
     <div class="intro">
         <p>
             Looking to get started with your fitness journey or perhaps enhance your existing workout routine? You're in the right place! The Muscle Lessons page provides a comprehensive collection of lessons tailored to different muscle groups and difficulty levels.
@@ -101,3 +174,4 @@
             <input type="submit" value="Submit">
         </div>
     </form>
+</div>
