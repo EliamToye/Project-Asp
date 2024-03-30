@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "User";
+    ViewData["Title"] = "Userpage";
 }
 
 <style>
@@ -89,7 +89,7 @@
         </p>
     </div>
 
-    <form asp-controller="Home" asp-action="Confirm" method="post">
+    <form method="post" asp-page="./ConfirmPage">
         <div class="muscle-group">
             <h2>Chest</h2>
             <img src="https://athleanx.com/wp-content/uploads/2021/09/chest-workouts.png" alt="Chest" class="muscle-image">
