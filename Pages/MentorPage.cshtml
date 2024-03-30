@@ -1,71 +1,58 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            background: url('https://png.pngtree.com/thumb_back/fh260/background/20230613/pngtree-black-and-white-gym-room-with-a-row-of-equipment-image_2911173.jpg') center center fixed;
-            background-size: cover;
-        }
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Mentor Homepage";
+}
 
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
+<style>
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #007bff;
+    }
+
+    p {
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .action-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .action-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            transition: background-color 0.3s ease;
         }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-
-        p {
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            .action-buttons a {
-                display: inline-block;
-                padding: 10px 20px;
-                margin: 5px;
-                background-color: #007bff;
-                color: #fff;
-                text-decoration: none;
-                border-radius: 5px;
-                transition: background-color 0.3s ease;
+            .action-buttons a:hover {
+                background-color: #0056b3;
             }
+</style>
 
-                .action-buttons a:hover {
-                    background-color: #0056b3;
-                }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Mentor Homepage</h1>
-        <p>Welkom bij de mentoren homepage</p>
-        <p>Hier kan u het rooster zien van de lessons en gebruikers verwijderen van lessons.</p>
-        <p>Klik op een van de onderstaande knoppen om naar de verschillende opties te gaan:</p>
-        <div class="action-buttons">
-            <a asp-action="Userlessons">Gebruiker lessons aanpassen</a>
-            <a asp-action="Lessonslist">lessons lijst</a>
-        </div>
+<div class="container">
+    <p>Welkom bij de mentoren homepage</p>
+    <p>Hier kan u het rooster zien van de lessons en gebruikers verwijderen van lessons.</p>
+    <p>Klik op een van de onderstaande knoppen om naar de verschillende opties te gaan:</p>
+    <div class="action-buttons">
+        <a asp-page="/Userlessons">Gebruiker lessons aanpassen</a>
+        <a asp-page="/lesson/index">Lessons lijst</a>
     </div>
-</body>
-</html>
+</div>
