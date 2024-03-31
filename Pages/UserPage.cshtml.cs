@@ -1,33 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Project.Models;
 using System.Linq;
 
 namespace Project.Pages
 {
     public class UserPageModel : PageModel
     {
-        // Your model properties, if any
+        public List<string> SelectedLessons { get; set; }
 
         public void OnGet()
         {
-            // Handle GET request if necessary
+            // Initialize the list of selected lessons
+            SelectedLessons = new List<string>();
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(List<string> lessons)
         {
-            // Check if any checkboxes are checked
-            var selectedLessons = Request.Form["lessons[]"].ToList();
+            // Handle the form submission here
+            // You can access the selected lessons via the 'lessons' parameter
+            SelectedLessons = lessons;
 
-            if (selectedLessons.Any())
-            {
-                // Redirect to the Confirm page
-                return RedirectToPage("/Confirm", new { SelectedLessons = selectedLessons });
-            }
-            else
-            {
-                // No checkboxes selected, just refresh the page
-                return Page();
-            }
+            // Redirect to a confirmation page or perform any other action
+            return RedirectToPage("./ConfirmPage", new { selectedLessons = SelectedLessons });
         }
     }
 }

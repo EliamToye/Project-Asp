@@ -1,9 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Homepage</title>
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Mentor Homepage";
+}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,18 +54,14 @@
                     background-color: #0056b3;
                 }
     </style>
-</head>
-<body>
     <div class="container">
         <h1>Admin Homepage</h1>
         <p>Welkom bij de admin homepage</p>
         <p>Hier kunt u de gegevens aanpassen of verwijderen.</p>
         <p>Klik op een van de onderstaande knoppen om naar de verschillende opties te gaan:</p>
         <div class="action-buttons">
-            <a asp-action="PriceChange">Prijs aanpassen</a>
-            <a asp-action="AddAdmin">Mentoren Beheren</a>
-            <a asp-action="ApproveUser">Gebruikers Beheren</a>
+            <a asp-page="LessonChange">Lessons Aanpassen</a>
+            <a asp-page="/mentor/index">Mentoren Beheren</a>
+            <a asp-page="/userdata/index">Gebruikers Beheren</a>
         </div>
     </div>
-</body>
-</html>

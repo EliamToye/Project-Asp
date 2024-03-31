@@ -47,7 +47,7 @@
     <h1>Index</h1>
 
     <p>
-        <a asp-page="Create">Genereer een nieuwe les</a>
+        <a asp-page="/lesson/Create">Genereer een nieuwe les</a>
     </p>
 
     <table class="table">
@@ -84,7 +84,11 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Mentor_name)
                     </td>
-                    
+                    <td>
+                        <a asp-page="/lesson/Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-page="/lesson/Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-page="/lesson/Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>

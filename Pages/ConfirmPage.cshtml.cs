@@ -6,20 +6,12 @@ namespace Project.Pages
 {
     public class ConfirmModel : PageModel
     {
-        [BindProperty]
-        public List<string> Lessons { get; set; }
+        public List<string> SelectedLessons { get; set; }
 
         public void OnGet(List<string> selectedLessons)
         {
-            Lessons = selectedLessons;
-        }
-
-        public IActionResult OnPostSubmit()
-        {
-            // Process the form submission here
-            // Redirect or perform any necessary action
-
-            return RedirectToPage("/UserPage"); // Redirect to the UserPage after submission
+            // Retrieve the selected lessons from the route parameter
+            SelectedLessons = selectedLessons;
         }
     }
 }

@@ -4,40 +4,78 @@
 @{
     ViewData["Title"] = "Details";
 }
+<style>
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
 
-<h1>Details</h1>
+    h1 {
+        margin-bottom: 20px;
+        color: #007bff;
+    }
 
-<div>
-    <h4>lesson</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.lesson.Start_time)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.lesson.Start_time)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.lesson.End_time)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.lesson.End_time)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.lesson.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.lesson.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.lesson.Mentor_name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.lesson.Mentor_name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.lesson?.ID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    p {
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<div class="container">
+    <h1>Details</h1>
+
+    <div>
+        <h4>lesson</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.lesson.Start_time)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.lesson.Start_time)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.lesson.End_time)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.lesson.End_time)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.lesson.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.lesson.Description)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.lesson.Mentor_name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.lesson.Mentor_name)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.lesson?.ID">Edit</a> |
+        <a asp-page="./Index">Back to List</a>
+    </div>
 </div>

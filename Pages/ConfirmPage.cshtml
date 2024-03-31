@@ -68,7 +68,7 @@
     <h1>Confirmation Page</h1>
     <p>Here's an overview of all the lessons you've selected:</p>
     <ul class="selected-lessons">
-        @foreach (var lesson in Model.Lessons)
+        @foreach (var lesson in Model.SelectedLessons)
         {
             <li>@lesson</li>
         }
