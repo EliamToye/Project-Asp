@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Confirmation Page";
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Confirmpage";
 }
 
 <style>
@@ -68,10 +70,6 @@
     <h1>Confirmation Page</h1>
     <p>Here's an overview of all the lessons you've selected:</p>
     <ul class="selected-lessons">
-        @foreach (var lesson in Model.SelectedLessons)
-        {
-            <li>@lesson</li>
-        }
     </ul>
     <form method="post" asp-page-handler="Submit">
         <button type="submit" class="submit-button">Submit</button>
